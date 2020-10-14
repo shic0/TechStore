@@ -1,7 +1,9 @@
 * {
+    box-sizing: border-box;
     margin: 0px;
-    font-family: ;
+    font-family: 'Arimo';
 }
+
 
 header {
     display: fixed;
