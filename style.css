@@ -1,0 +1,24 @@
+* {
+    margin: 0px;
+    font-family: 'Arimo';
+}
+
+header {
+    display: fixed;
+    position: absolute;
+    width: 100vw;
+    height: 77px;  
+    background-color: black;
+    color: white;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#boldHeader {
+    font-weight: bolder;
+}
+/* kan inte få font weigten till att bli bolder, kanske måste lägga till det i google font taggen? */
