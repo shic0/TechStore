@@ -72,12 +72,8 @@ let mainContent = document.getElementById("mainContent")
         // Priset på telefonen
         
         let buyButton = document.createElement("button")
-        buyButton.style.flex = "none"
         buyButton.id = "buyButton"
-        buyButton.style.backgroundColor = "#5596F5"
-        buyButton.innerText = "lägg till i kundvagn"
-        buyButton.style.color = "white"
-        buyButton.style.fontWeight = "700"
+        buyButton.innerText = "Lägg till i kundvagn"
         buyButton.onclick
         // skicka till varukorg knappen
         

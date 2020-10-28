@@ -63,7 +63,18 @@ header {
 }
 
 #priceContainer {
-    
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#buyButton {
+    width: 350px;
+    height: 60px;
+    font-size: 30px;
+    color: white;
+    background-color: #5596f5;
+    border: none;
+    border-radius: 9px;
 }
 
 
