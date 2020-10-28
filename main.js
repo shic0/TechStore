@@ -23,9 +23,14 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
+
 // Check your console to see that the products are stored in the listOfProducts varible.
     
+    console.log(listOfProducts);
 
+    // Check your console to see that the products are stored in the listOfProducts varible.
+        // Check your console to see that the products are stored in the listOfProducts varible.
+    
 let mainContent = document.getElementById("mainContent")
 
 // Kallar på parent elementet till mainContainer
