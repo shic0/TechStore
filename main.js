@@ -20,9 +20,14 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
+
 // Check your console to see that the products are stored in the listOfProducts varible.
     
     console.log(listOfProducts);
+
+    // Check your console to see that the products are stored in the listOfProducts varible.
+        // Check your console to see that the products are stored in the listOfProducts varible.
+
     let mainContent = document.getElementById("mainContent")
      // Kallar på parent elementet till mainContainer
     
@@ -35,9 +40,30 @@ function addProductsToWebpage() {
      
     let titleContainer = document.createElement("div")
     titleContainer.style.height ="20px"
-    titleContainer.style.innerhtml = title
+    
 
      // Titeln på telefonen
+
+    let descriptionContainer = document.createElement("div")
+     // Description på telefonen
+     
+    let imgContainer = document.createElement("img")
+   
+     // bilden
+    
+    let priceContainer = document.createElement("div")
+     // Priset på telefonen
+    
+    let buyButton = document.createElement("button")
+     // skicka till varukorg
+    
+    
+    mainContainer.appendChild(descriptionContainer)
+    mainContainer.appendChild(titleContainer)
+    mainContainer.appendChild(imgContainer)
+    mainContainer.appendChild(priceContainer)
+    mainContent.appendChild(mainContainer)
+    mainContainer.appendChild(buyButton)
 
     let descriptionContainer = document.createElement("div")
      // Description på telefonen
