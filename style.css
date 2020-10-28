@@ -5,8 +5,9 @@
 }
 
 header {
-    display: fixed;
-    position: absolute;
+    
+    position: fixed;
+    top: 0px;
     width: 100vw;
     height: 77px;  
     background-color: black;
@@ -23,3 +24,59 @@ header {
     font-weight: bolder;
 }
 /* kan inte få font weigten till att bli bolder, kanske måste lägga till det i google font taggen? */
+
+#mainContent {
+    margin-top: 70px;
+    height: 3700px;
+    width: 100vw;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    flex-direction: column;
+   
+}
+
+#mainContainer {
+    height: 850px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+    align-items: center;
+
+}
+
+#titleContainer {
+    font-size: 60px;
+    font-weight: 700;
+    
+}
+
+#descriptionContainer {
+    font-size: 20px;
+    font-weight: 600;
+
+}
+
+#imgContainer {
+    height: 600px;
+    width: 374px;
+}
+
+#priceContainer {
+    font-size: 30px;
+    font-weight: 700;
+}
+
+#buyButton {
+    width: 350px;
+    height: 60px;
+    font-size: 30px;
+    color: white;
+    background-color: #5596f5;
+    border: none;
+    border-radius: 9px;
+}
+
+
+
+
