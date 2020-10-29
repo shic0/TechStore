@@ -25,8 +25,8 @@ function initSite() {
 function addProductsToWebpage() {
 
 let mainContent = document.getElementById("mainContent")
-
 // Kallar på parent elementet till mainContainer
+
 let greyBackground = true
 
 
@@ -83,5 +83,48 @@ for (let i = 0; i < listOfProducts.length; i++) {
     
 
     }
+    
+    
+    let addProducts = document.getElementById("buyButton")
+    // addproducts blir min buybutton knapp
+    
+    addProducts.addEventListener("click",pushToCart)
+    // lägger eventlistener click på buybutton och funktionen pushToCart
+    
+    function checkLocalStorage(){
+        let productNumbers = localStorage.getItem("cartNumbers")
+        // Hämtar cartnumbers värde från local storage och sparar den i en variabel
+       
+        if (productNumbers) {
+            document.getElementById("cartSpan").innerHTML = productNumbers
+            // om det finns något värde i cartNumbers från localStorage, så blir inner html på cartspan = värdet
+            
+        }
+    }
+    // funktion för, när man refreshar sidan så uppdateras varukorg nummer till det som finns i localstorage
+    
+    function pushToCart() {
+        let productNumbers = localStorage.getItem("cartNumbers")
+        // hämtar o sparar cartNumbers värde från localStorage
 
+
+        productNumbers = parseInt(productNumbers)
+        // då värder är en string gör vi om den till ett nummer
+
+        if (productNumbers) {
+            localStorage.setItem("cartNumbers",productNumbers + 1)
+            document.getElementById("cartSpan").innerHTML = productNumbers + 1
+            // om det finns ett värde i cartNumbers så plussar vi med 1
+        } else{
+            localStorage.setItem("cartNumbers",1)
+            document.getElementById("cartSpan").innerHTML = 1
+            // om det inte finns lägger vi till 1
+        }
+       
+    }
+   
+    checkLocalStorage()
+    // kallar på funktionen checkLocalStorage varje gång sidan laddas så den kollar om det finns något i cartSpan
 }
+
+
