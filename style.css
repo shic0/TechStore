@@ -97,6 +97,7 @@ header {
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .mainContainerGrey {background: #F5F5F5;}
+    #mainContainer {height: 1600px;}
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
