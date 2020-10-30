@@ -110,8 +110,6 @@ function pushToCart(product) {
     let productNumbers = localStorage.getItem("cartNumbers")
     // hämtar o sparar cartNumbers värde från localStorage
 
-    
-    
     productNumbers = parseInt(productNumbers)
     // då värdet är en string gör vi om den till ett nummer
 
