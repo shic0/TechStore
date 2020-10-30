@@ -28,9 +28,8 @@ function addProductsToWebpage() {
     // Kallar på parent elementet till mainContainer
 
     let greyBackground = true
-
-
-        
+    // gör greyBackgruond till en bolean
+    
     for (let i = 0; i < listOfProducts.length; i++) {
             
         let product = listOfProducts[i]
