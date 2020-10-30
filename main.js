@@ -24,107 +24,105 @@ function initSite() {
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
 
-let mainContent = document.getElementById("mainContent")
-// Kallar på parent elementet till mainContainer
+    let mainContent = document.getElementById("mainContent")
+    // Kallar på parent elementet till mainContainer
 
-let greyBackground = true
+    let greyBackground = true
 
 
-    
-for (let i = 0; i < listOfProducts.length; i++) {
         
-    let product = listOfProducts[i]
-    // sparar pruduktlistan i en variabel
-    
-    let mainContainer = document.createElement("div")
-    mainContainer.id = "mainContainer"
-    if(greyBackground == true){
-        mainContainer.classList = "mainContainerGrey"
+    for (let i = 0; i < listOfProducts.length; i++) {
+            
+        let product = listOfProducts[i]
+        // sparar pruduktlistan i en variabel
         
-        
-    }
-    greyBackground = !greyBackground
-    
-    // skapat mainContainer samt lite styling, if satsen gör så att varannan maincontainer får en class
-    
-    let titleContainer = document.createElement("div")
-    titleContainer.id = "titleContainer"
-    titleContainer.innerHTML = product.title
-    // Titeln på telefonen
-    
-    let descriptionContainer = document.createElement("div")
-    descriptionContainer.id = "descriptionContainer"
-    descriptionContainer.innerHTML = product.description
-    // Description på telefonen
-    
-    let imgContainer = document.createElement("img")
-    imgContainer.id = "imgContainer"
-    imgContainer.src = product.image
-    // bilden på telefonen
-    
-    let priceContainer = document.createElement("div")
-    priceContainer.id = "priceContainer"
-    priceContainer.innerHTML = product.price + " " + "kr"
-    // Priset på telefonen
-    
-    let buyButton = document.createElement("button")
-    buyButton.id = "buyButton"
-    buyButton.innerText = "Lägg till i kundvagn"
-    buyButton.onclick
-    // skicka till varukorg knappen
-    
-    mainContainer.appendChild(titleContainer)
-    mainContainer.appendChild(descriptionContainer)
-    mainContainer.appendChild(imgContainer)
-    mainContainer.appendChild(priceContainer)
-    mainContainer.appendChild(buyButton)
-    mainContent.appendChild(mainContainer)
-    // appendar divarna till mainContainer
-    
-
-    }
-    
-    
-    let addProducts = document.getElementById("buyButton")
-    // addproducts blir min buybutton knapp
-    
-    addProducts.addEventListener("click",pushToCart)
-    // lägger eventlistener click på buybutton och funktionen pushToCart
-    
-    function checkLocalStorage(){
-        let productNumbers = localStorage.getItem("cartNumbers")
-        // Hämtar cartnumbers värde från local storage och sparar den i en variabel
-       
-        if (productNumbers) {
-            document.getElementById("cartSpan").innerHTML = productNumbers
-            // om det finns något värde i cartNumbers från localStorage, så blir inner html på cartspan = värdet
+        let mainContainer = document.createElement("div")
+        mainContainer.id = "mainContainer"
+        if(greyBackground == true){
+            mainContainer.classList = "mainContainerGrey"
+            
             
         }
+        greyBackground = !greyBackground
+        
+        // skapat mainContainer samt lite styling, if satsen gör så att varannan maincontainer får en class
+        
+        let titleContainer = document.createElement("div")
+        titleContainer.id = "titleContainer"
+        titleContainer.innerHTML = product.title
+        // Titeln på telefonen
+        
+        let descriptionContainer = document.createElement("div")
+        descriptionContainer.id = "descriptionContainer"
+        descriptionContainer.innerHTML = product.description
+        // Description på telefonen
+        
+        let imgContainer = document.createElement("img")
+        imgContainer.id = "imgContainer"
+        imgContainer.src = product.image
+        // bilden på telefonen
+        
+        let priceContainer = document.createElement("div")
+        priceContainer.id = "priceContainer"
+        priceContainer.innerHTML = product.price + " " + "kr"
+        // Priset på telefonen
+        
+        let buyButton = document.createElement("button")
+        buyButton.id = "buyButton"
+        buyButton.innerText = "Lägg till i kundvagn"
+        buyButton.addEventListener("click",function() {
+            console.log(product)
+            pushToCart(product)
+            
+        })
+        // skicka till varukorg knappen
+        
+        mainContainer.appendChild(titleContainer)
+        mainContainer.appendChild(descriptionContainer)
+        mainContainer.appendChild(imgContainer)
+        mainContainer.appendChild(priceContainer)
+        mainContainer.appendChild(buyButton)
+        mainContent.appendChild(mainContainer)
+        // appendar divarna till mainContainer
+        
+
     }
-    // funktion för, när man refreshar sidan så uppdateras varukorg nummer till det som finns i localstorage
     
-    function pushToCart() {
-        let productNumbers = localStorage.getItem("cartNumbers")
-        // hämtar o sparar cartNumbers värde från localStorage
-
-
-        productNumbers = parseInt(productNumbers)
-        // då värder är en string gör vi om den till ett nummer
-
-        if (productNumbers) {
-            localStorage.setItem("cartNumbers",productNumbers + 1)
-            document.getElementById("cartSpan").innerHTML = productNumbers + 1
-            // om det finns ett värde i cartNumbers så plussar vi med 1
-        } else{
-            localStorage.setItem("cartNumbers",1)
-            document.getElementById("cartSpan").innerHTML = 1
-            // om det inte finns lägger vi till 1
-        }
        
-    }
-   
     checkLocalStorage()
     // kallar på funktionen checkLocalStorage varje gång sidan laddas så den kollar om det finns något i cartSpan
 }
 
+function checkLocalStorage(){
+    let productNumbers = localStorage.getItem("products")
+    // Hämtar cartnumbers värde från local storage och sparar den i en variabel
+   
+    if (productNumbers) {
+        document.getElementById("cartSpan").innerHTML = productNumbers
+        // om det finns något värde i cartNumbers från localStorage, så blir inner html på cartspan = värdet
+        
+    }
+}
+// funktion för, när man refreshar sidan så uppdateras varukorg nummer till det som finns i localstorage
+
+function pushToCart(product) {
+    let productNumbers = localStorage.getItem("cartNumbers")
+    // hämtar o sparar cartNumbers värde från localStorage
+
+    
+    
+    productNumbers = parseInt(productNumbers)
+    // då värdet är en string gör vi om den till ett nummer
+
+    if (productNumbers) {
+        localStorage.setItem("cartNumbers",productNumbers + 1)
+        document.getElementById("cartSpan").innerHTML = productNumbers + 1
+        // om det finns ett värde i cartNumbers så plussar vi med 1
+    } else{
+        localStorage.setItem("cartNumbers",1)
+        document.getElementById("cartSpan").innerHTML = 1
+        // om det inte finns lägger vi till 1
+    }
+   
+}
 
