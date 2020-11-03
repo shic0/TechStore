@@ -28,9 +28,8 @@ function addProductsToWebpage() {
     // Kallar på parent elementet till mainContainer
 
     let greyBackground = true
-
-
-        
+    // gör greyBackgruond till en bolean
+    
     for (let i = 0; i < listOfProducts.length; i++) {
             
         let product = listOfProducts[i]
@@ -38,14 +37,15 @@ function addProductsToWebpage() {
         
         let mainContainer = document.createElement("div")
         mainContainer.id = "mainContainer"
+        // skapat mainContainer samt lite styling, if satsen gör så att varannan maincontainer får en class
+        
         if(greyBackground == true){
             mainContainer.classList = "mainContainerGrey"
             
             
         }
         greyBackground = !greyBackground
-        
-        // skapat mainContainer samt lite styling, if satsen gör så att varannan maincontainer får en class
+        // greyBackground är falsk alltså ingen class på varannan main Container
         
         let titleContainer = document.createElement("div")
         titleContainer.id = "titleContainer"
@@ -94,7 +94,7 @@ function addProductsToWebpage() {
 }
 
 function checkLocalStorage(){
-    let productNumbers = localStorage.getItem("products")
+    let productNumbers = localStorage.getItem("cartNumbers")
     // Hämtar cartnumbers värde från local storage och sparar den i en variabel
    
     if (productNumbers) {
@@ -109,8 +109,6 @@ function pushToCart(product) {
     let productNumbers = localStorage.getItem("cartNumbers")
     // hämtar o sparar cartNumbers värde från localStorage
 
-    
-    
     productNumbers = parseInt(productNumbers)
     // då värdet är en string gör vi om den till ett nummer
 
@@ -119,7 +117,7 @@ function pushToCart(product) {
         document.getElementById("cartSpan").innerHTML = productNumbers + 1
         // om det finns ett värde i cartNumbers så plussar vi med 1
     } else{
-        localStorage.setItem("cartNumbers",1)
+        localStorage.setItem("cartNumbers", 1)
         document.getElementById("cartSpan").innerHTML = 1
         // om det inte finns lägger vi till 1
     }
