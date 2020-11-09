@@ -122,7 +122,7 @@ function pushToCart(product) {
         // om det finns ett värde i cartNumbers så plussar vi med 1
     } else{
         localStorage.setItem("cartNumbers", 1)
-        document.getElementById("cartSpan").innerH
+        document.getElementById("cartSpan").innerHTML = 1
         // om det inte finns lägger vi till 1
     }
    

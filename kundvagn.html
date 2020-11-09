@@ -10,11 +10,31 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Store</title>
+    
+    <link rel="stylesheet" href="style.css">
+    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
+
 </head>
 <body>
+    <header>
+        <div class="header">
+            <div>
+               <a class="removeLinkStyle" id="techStoreLogo" href="index.html"> <h1>TechStore</h1></a>
+            </div>
+            <div> 
+                <span id="cartSpan">0</span>
+                <a class="removeLinkStyle" id="aKundvagnColor" href="/kundvagn.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
+            </div>
+        </div>
+            <!-- lägg till JavaScript som är kopplad till varukorgen = antal varor + är det ok att styra storleken på iconen i html eller måste det göras i css-->
+        
+     </header>
 
     <main>
-        <h1 style="height: 120px;display: flex;justify-content: center;align-items: center;">Kundvagn</h1>
+        <h1 style="height: 120px;display: flex;justify-content: center;align-items: center; margin-top: 50px;">Kundvagn</h1>
+
+        <!-- skrev in css i h1 taggen Tim (margin-top 50px) detta ska senare läggas in i en separat css fil men tänkte att jag lämnar det så sålänge så jag inte ändrar något i det du tänkt -->
 
         <div class="container" style="display: flex;justify-content: center;width: 100vw;">
             

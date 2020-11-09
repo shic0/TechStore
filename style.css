@@ -5,7 +5,6 @@
 }
 
 header {
-    
     position: fixed;
     top: 0px;
     width: 100vw;
@@ -20,10 +19,11 @@ header {
     margin: 20px;
 }
 
-#aKundvagnColor {
-color: white;
-}
-/* kan inte få font weigten till att bli bolder, kanske måste lägga till det i google font taggen? */
+.removeLinkStyle {
+    text-decoration: none;
+    color: white;
+} 
+
 
 #mainContent {
     margin-top: 51px;
