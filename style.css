@@ -29,9 +29,13 @@ h1 {
     color: white;
 }
 
+i {
+    color: white;
+}
 a:hover{
     text-decoration: none;
 }
+
 /* för att styla a linkarna på kundvagnen, gick inte via class */
 
 #mainContent {
