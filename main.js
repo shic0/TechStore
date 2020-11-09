@@ -66,7 +66,11 @@ function addProductsToWebpage() {
         priceContainer.id = "priceContainer"
         priceContainer.innerHTML = product.price + " " + "kr"
         // Priset på telefonen
-        
+
+        /*  let cartIcon = document.createElement("i")
+        cartIcon.innerText = "fas fa-cart-arrow-down"  */
+        // kundvagns icon i det blåfältet
+    
         let buyButton = document.createElement("button")
         buyButton.id = "buyButton"
         buyButton.innerText = "Lägg till i kundvagn"
@@ -118,7 +122,7 @@ function pushToCart(product) {
         // om det finns ett värde i cartNumbers så plussar vi med 1
     } else{
         localStorage.setItem("cartNumbers", 1)
-        document.getElementById("cartSpan").innerHTML = 1
+        document.getElementById("cartSpan").innerH
         // om det inte finns lägger vi till 1
     }
    

@@ -20,8 +20,8 @@ header {
     margin: 20px;
 }
 
-#boldHeader {
-    font-weight: bolder;
+#aKundvagnColor {
+color: white;
 }
 /* kan inte få font weigten till att bli bolder, kanske måste lägga till det i google font taggen? */
 
