@@ -24,6 +24,15 @@ header {
     color: white;
 } 
 
+/* h1 och a-hover ska ändras i en class senare */
+h1 {
+    color: white;
+}
+
+a:hover{
+    text-decoration: none;
+}
+/* för att styla a linkarna på kundvagnen, gick inte via class */
 
 #mainContent {
     margin-top: 51px;
