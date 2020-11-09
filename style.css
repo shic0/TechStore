@@ -19,13 +19,19 @@ header {
     margin: 20px;
 }
 
-#techStoreLogo {
+a:link {
+    color: red;
+}
+a:hover {
+    text-decoration: none;
+  }
+/* #techStoreLogo {
     color: white;
 }
 
 #aKundvagnColor {
     color: white;
-}
+} */
 
 
 #mainContent {
