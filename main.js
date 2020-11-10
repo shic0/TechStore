@@ -67,15 +67,15 @@ function addProductsToWebpage() {
         priceContainer.innerHTML = product.price + " " + "kr"
         // Priset på telefonen
 
-        /*  let cartIcon = document.createElement("i")
-        cartIcon.innerText = "fas fa-cart-arrow-down"  */
+        let cartIcon = document.createElement("i")
+        cartIcon.classList = "fas fa-cart-arrow-down"
         // kundvagns icon i det blåfältet
     
         let buyButton = document.createElement("button")
         buyButton.id = "buyButton"
-        buyButton.innerText = "Lägg till i kundvagn"
+        let buyBtnTxt = document.createElement("p")
+        buyBtnTxt.innerText = "Lägg till i kundvagnen"
         buyButton.addEventListener("click",function() {
-            console.log(product)
             pushToCart(product)
             
         })
@@ -86,6 +86,8 @@ function addProductsToWebpage() {
         mainContainer.appendChild(imgContainer)
         mainContainer.appendChild(priceContainer)
         mainContainer.appendChild(buyButton)
+        buyButton.appendChild(cartIcon)
+        buyButton.appendChild(buyBtnTxt)
         mainContent.appendChild(mainContainer)
         // appendar divarna till mainContainer
         
