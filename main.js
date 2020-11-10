@@ -73,7 +73,8 @@ function addProductsToWebpage() {
     
         let buyButton = document.createElement("button")
         buyButton.id = "buyButton"
-        buyButton.innerText = "Lägg till i kundvagn"
+        let buyBtnTxt = document.createElement("p")
+        buyBtnTxt.innerText = "Lägg till i kundvagnen"
         buyButton.addEventListener("click",function() {
             pushToCart(product)
             
@@ -86,6 +87,7 @@ function addProductsToWebpage() {
         mainContainer.appendChild(priceContainer)
         mainContainer.appendChild(buyButton)
         buyButton.appendChild(cartIcon)
+        buyButton.appendChild(buyBtnTxt)
         mainContent.appendChild(mainContainer)
         // appendar divarna till mainContainer
         
