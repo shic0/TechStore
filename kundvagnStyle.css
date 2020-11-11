@@ -1,0 +1,66 @@
+*{
+    box-sizing: border-box;
+}
+
+.cardContainer{
+    width: 250px;
+    height: 400px;
+    margin: 100px;
+    display: flex;
+    border: 2px solid #5596f5;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 15px;
+}
+
+.imgContainer{
+    flex: 3 0 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.textContainer{
+    flex: 1 0 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.productImg{
+    max-width: 60%;
+}
+
+.sideTitle{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+main{
+    display: flex;
+}
+
+.mainContainer{
+display: flex;
+justify-content: center;
+width: 100vw;
+}
+
+.taBortBtn{
+    width: 150px;
+    height: 35px;
+    background-color: #E64E4E;
+    border-radius: 8px;
+    border-style: none;
+    color: #ffffff;
+    font-weight: 100%;
+}
