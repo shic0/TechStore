@@ -1,6 +1,8 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <link rel="stylesheet" href="kundvagnStyle.css">
+    <script defer src="kundvagnLogic.js"></script>
     <script defer src="https://code.jquery.com/jquery-3.5.1.js"   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="   crossorigin="anonymous"></script>
     <link rel="stylesheet" href="bootstrap-grid.css">
     <link rel="stylesheet" href="bootstrap-reboot.css">
@@ -10,63 +12,27 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Tech Store</title>
-    
-    <link rel="stylesheet" href="style.css">
-    <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">    
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous"> 
-
 </head>
 <body>
 
-    <header>
-        <div class="header">
-            <div>
-                <a class="removeLinkStyle" id="techStoreLogo" href="index.html"><h1>TechStore</h1></a>
-            </div>
-            <div> 
-                <span id="cartSpan">0</span>
-                <a class="removeLinkStyle" id="aKundvagnColor" href="/kundvagn.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-            </div>
-        </div>
-            
-        
-     </header>
-
-  
-  
-
     <main>
-        <h1 style="height: 120px;display: flex;justify-content: center;align-items: center; margin-top: 50px">Kundvagn</h1>
 
-        <!-- skrev in css i h1 taggen Tim (margin-top 50px) detta ska senare läggas in i en separat css fil men tänkte att jag lämnar det så sålänge så jag inte ändrar något i det du tänkt -->
+        <h1 class="sideTitle">Kundvagn</h1>
 
-        <div class="container" style="display: flex;justify-content: center;width: 100vw;">
-            
-            <div class="card text-center border-primary" style="background-color:  #F5F5F5;width: 10rem;margin: 15px;display: flex; justify-content: center; align-items: center;">
+        <div class="mainContainer">
+            <div id="index" class ="indexContainer">
+
+                <!--
+                <div id="CardIphoneX" class="card text-center border-primary" style="border-radius: 15px; background-color:  #F5F5F5;width: 10rem;margin: 15px;display: flex; justify-content: center; align-items: center;">
                 <img class="card-img-top" src="/assets/iPhoneX.png" alt="Card image cap">
                 <div class="card-body">
                 <h5 class="card-title">iPhone X</h5>
                 <p class="card-text">11495 kr</p>
                 <a href="#" class="btn btn-danger">Ta bort</a>
-                </div>
-            </div>
-            <div class="card text-center border-primary" style="background-color:  #F5F5F5;width: 10rem;margin: 15px;display: flex; justify-content: center; align-items: center;">
-                <img class="card-img-top" src="/assets/iPhoneX.png" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">iPhone X</h5>
-                <p class="card-text">11495 kr</p>
-                <a href="#" class="btn btn-danger">Ta bort</a>
-                </div>
-            </div>
-            <div class="card text-center border-primary" style="background-color:  #F5F5F5;width: 10rem;margin: 15px;display: flex; justify-content: center; align-items: center;">
-                <img class="card-img-top" src="/assets/iPhoneX.png" alt="Card image cap">
-                <div class="card-body">
-                <h5 class="card-title">iPhone X</h5>
-                <p class="card-text">11495 kr</p>
-                <a href="#" class="btn btn-danger">Ta bort</a>
-                </div>
-            </div>
+                -->
+            </div> 
         </div>
+        
     </main>
 
 </body>
