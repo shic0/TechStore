@@ -40,7 +40,7 @@ productTitle.innerHTML = productIphoneX.title
 let productPrice = document.createElement("b")
 productPrice.innerHTML = productIphoneX.price
 
-taBortBtn.innerHTML = '<i class="far fa-trash-alt">Ta bort</i>'
+taBortBtn.innerHTML = '<i class="far fa-trash-alt">&emsp;Ta bort</i>'
 
 textContainer.appendChild(productTitle)
 textContainer.appendChild(productPrice)
