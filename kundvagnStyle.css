@@ -5,7 +5,9 @@
 .cardContainer{
     width: 250px;
     height: 400px;
-    margin: 100px;
+    margin-top: 100px;
+    margin-bottom: 30px;
+
     display: flex;
     border: 2px solid #5596f5;
     flex-direction: column;
@@ -43,6 +45,7 @@
     display: flex;
     justify-content: center;
     align-items: center;
+    font-weight: bold;
 }
 
 main{
@@ -56,11 +59,38 @@ width: 100vw;
 }
 
 .taBortBtn{
-    width: 130px;
+    width: 135px;
     height: 35px;
     background-color: #E64E4E;
-    border-radius: 8px;
+    border-radius: 7px;
     border-style: none;
     color: #ffffff;
     font-weight: 100%;
+}
+
+.summaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+.summa{
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.slutförKöpBtn{
+    background-color: #5596F5;
+    color: #FFFFFF;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-style: none;
+    border-radius: 7px;
+    
 }
