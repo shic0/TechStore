@@ -32,7 +32,7 @@ let taBortBtn = document.createElement("button")
 productImg.src = productIphoneX.imgUrl
 
 let indexContainer = document.getElementById("index")
-
+let slutförContainer = document.getElementsByName("slutförContainer")
 
 let productTitle = document.createElement("h1")
 productTitle.innerHTML = productIphoneX.title
@@ -40,10 +40,11 @@ productTitle.innerHTML = productIphoneX.title
 let productPrice = document.createElement("b")
 productPrice.innerHTML = productIphoneX.price
 
-taBortBtn.innerHTML = '<i class="far fa-trash-alt">&emsp;Ta bort</i>'
+taBortBtn.innerHTML = '<i class="far fa-trash-alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ta bort</i>'
 
 textContainer.appendChild(productTitle)
 textContainer.appendChild(productPrice)
+productTitle.style.fontWeight = "bold"
 
 cardContainer.className = "cardContainer"
 imgContainer.className = "imgContainer"
