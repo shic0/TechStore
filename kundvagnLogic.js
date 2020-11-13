@@ -32,7 +32,7 @@ let taBortBtn = document.createElement("button")
 productImg.src = productIphoneX.imgUrl
 
 let indexContainer = document.getElementById("index")
-let slutförContainer = document.getElementsByName("slutförContainer")
+let checkOutContainer = document.getElementsByName("checkOutContainer")
 
 let productTitle = document.createElement("h1")
 productTitle.innerHTML = productIphoneX.title
