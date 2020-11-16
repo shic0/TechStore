@@ -1,13 +1,20 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
 }
 
 header {
     position: fixed;
     top: 0px;
     width: 100vw;  
+ #42-Make-a-login-page-login.html-&-login.css
+    background-color: #212121;
+    color: #FFFFFF;
+
     background-color: black;
     color: white;
+
 }
 
 .header {
@@ -15,8 +22,11 @@ header {
     justify-content: space-between;
     margin: 20px;
 }
+ #42-Make-a-login-page-login.html-&-login.css
+#techStoreLogo {
 
 #techStoreLogo{
+
     font-size: 20px;
 }
 
@@ -27,6 +37,10 @@ header {
 
 .removeLinkStyle {
     text-decoration: none;
+#42-Make-a-login-page-login.html-&-login.css
+    color: #FFFFFF;
+} 
+
     color: white;
 } 
 
@@ -44,6 +58,7 @@ a:hover{
 }
 
 /* för att styla a linkarna på kundvagnen, gick inte via class */
+
 
 
 .cardContainer{

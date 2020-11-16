@@ -1,0 +1,54 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100vw;  
+    background-color: #212121;
+    color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#techStoreLogo, #loginForm{
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+
+.mainBox {
+    display: flex;
+    width: 100vw;
+    margin-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: right;
+    flex-direction: column;
+    
+    
+}
+.loginBox {
+    display: flex;
+    text-align: center;
+    flex-direction: column; 
+    width: 25%;  
+    margin-left: 65%;
+}
+
+
+.createAccount {
+display: flex;
+text-align: center;
+flex-direction: column; 
+width: 25%;  
+margin-left: 65%;
+margin-top: 50px;
+}

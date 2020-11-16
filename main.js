@@ -33,17 +33,16 @@ function addProductsToWebpage() {
     for (let i = 0; i < listOfProducts.length; i++) {
             
         let product = listOfProducts[i]
-        // sparar pruduktlistan i en variabel
+        // sparar produktlistan i en variabel
         
         let mainContainer = document.createElement("div")
         mainContainer.id = "mainContainer"
         // skapat mainContainer samt lite styling, if satsen gör så att varannan maincontainer får en class
         
         if(greyBackground == true){
-            mainContainer.classList = "mainContainerGrey"
-            
-            
+            mainContainer.classList = "mainContainerGrey"   
         }
+
         greyBackground = !greyBackground
         // greyBackground är falsk alltså ingen class på varannan main Container
         
@@ -73,6 +72,7 @@ function addProductsToWebpage() {
     
         let buyButton = document.createElement("button")
         buyButton.id = "buyButton"
+        
         let buyBtnTxt = document.createElement("p")
         buyBtnTxt.innerText = "Lägg till i kundvagnen"
         buyButton.addEventListener("click",function() {
