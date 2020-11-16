@@ -8,8 +8,8 @@ header {
     position: fixed;
     top: 0px;
     width: 100vw;  
-    background-color: black;
-    color: white;
+    background-color: #212121;
+    color: #FFFFFF;
 }
 
 .header {
@@ -18,7 +18,7 @@ header {
     margin: 20px;
 }
 
-#techStoreLogo{
+#techStoreLogo {
     font-size: 20px;
 }
 
@@ -29,11 +29,11 @@ header {
 
 .removeLinkStyle {
     text-decoration: none;
-    color: white;
+    color: #FFFFFF;
 } 
 
 /* h1 och a-hover ska ändras i en class senare */
-h1 {
+/* h1 {
     color: white;
 }
 
@@ -42,7 +42,7 @@ i {
 }
 a:hover{
     text-decoration: none;
-}
+} */
 
 /* för att styla a linkarna på kundvagnen, gick inte via class */
 
@@ -54,7 +54,6 @@ a:hover{
     justify-content: space-around;
     align-items: center;
     flex-direction: column;
-   
 }
 
 #mainContainer {
@@ -99,7 +98,7 @@ a:hover{
     font-size: 25px;
     width: 350px;
     height: 60px;
-    color: white;
+    color: #FFFFFF;
     background-color: #5596f5;
     border: none;
     border-radius: 9px;
@@ -127,12 +126,12 @@ a:hover{
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
-    .mainContainerGrey {background: white;}
+    .mainContainerGrey {background: #FFFFFF;}
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
   @media only screen and (min-width: 1200px) {
-    .mainContainerGrey {background: white;}
+    .mainContainerGrey {background: #FFFFFF;}
   }
 
 

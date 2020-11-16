@@ -1,6 +1,37 @@
 *{
     box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
 }
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100vw;  
+    background-color: #212121;
+    color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+#techStoreLogo {
+    font-size: 20px;
+}
+
+#cartSpan {
+    font-size: 40px;
+    margin-right: 8px;
+}
+
+.removeLinkStyle {
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+
 
 .cardContainer{
     width: 250px;
