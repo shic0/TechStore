@@ -1,3 +1,37 @@
+/* * {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
+}
+
+header {
+    position: fixed;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    top: 0px;
+    width: 100vw; 
+    height: 85px;
+    background-color: #212121;
+    color: #FFFFFF;
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+  
+}
+
+#techStoreLogo {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+.removeLinkStyle {
+    text-decoration: none;
+    color: #FFFFFF;
+}  */
 * {
     box-sizing: border-box;
     margin: 0px;
@@ -7,7 +41,8 @@
 header {
     position: fixed;
     top: 0px;
-    width: 100vw;  
+    width: 100vw; 
+    height: 85px; 
     background-color: #212121;
     color: #FFFFFF;
 }
@@ -16,17 +51,25 @@ header {
     display: flex;
     justify-content: space-between;
     margin: 20px;
+    margin-right: 20px;
 }
 
-#techStoreLogo, #loginForm{
+#techStoreLogo {
     font-size: 20px;
+}
+
+#cartSpan {
+    font-size: 40px;
+    margin-right: 8px;
+}
+
+.removeLinkStyle {
     text-decoration: none;
     color: #FFFFFF;
 } 
 
 .mainBox {
     display: flex;
-    width: 100vw;
     margin-top: 100px;
     margin-left: 20px;
     margin-right: 20px;
@@ -37,10 +80,12 @@ header {
 }
 .loginBox {
     display: flex;
+    justify-content: center;
     text-align: center;
+    float: right;
     flex-direction: column; 
-    width: 25%;  
-    margin-left: 65%;
+    width: 30vw;  
+    
 }
 
 
@@ -48,7 +93,6 @@ header {
 display: flex;
 text-align: center;
 flex-direction: column; 
-width: 25%;  
-margin-left: 65%;
+width: 30vw;  
 margin-top: 50px;
 }

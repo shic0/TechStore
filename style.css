@@ -7,7 +7,8 @@
 header {
     position: fixed;
     top: 0px;
-    width: 100vw;  
+    width: 100vw; 
+    height: 85px; 
     background-color: #212121;
     color: #FFFFFF;
 }
