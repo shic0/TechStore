@@ -22,5 +22,41 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "assets/LGV30.png",
         "price": 7495
-    } 
+    },{
+        "title": "iPhone 12 Pro Max",
+        "description": "A nice leap forward with unbeatable camera in dim light.",
+        "image": "assets/Phone-12-pro-max.png",
+        "price": 15090,
+        "inCart": 0
+    },{
+        "title": "iPhone 12 Mini",
+        "description": "Takes the development one step further in a mini version.",
+        "image": "assets/iphone12mini.png",
+        "price": 9290,
+        "inCart": 0
+    },{
+        "title": "iPhone 11",
+        "description": "iPhonne has become Pro with a battery that lasts all day.",
+        "image": "assets/iPhone11.png",
+        "price": 10890,
+        "inCart": 0
+    },{
+        "title": "Motorola 5G",
+        "description": "Meet moto 5G plus that gives you ultra fast download and streaming.",
+        "image": "assets/motorola.png",
+        "price": 3990,
+        "inCart": 0
+    },{
+        "title": "ASUS ZenFone 4 Pro",
+        "description": "Shaped to make you feel luxuary in every detail.",
+        "image": "assets/ASUS-ZenFone-4-Pro.png",
+        "price": 8497,
+        "inCart": 0
+    },{
+        "title": "REALME 7",
+        "description": "Takes sharpe pictures and downloads fast.",
+        "image": "assets/REALME-7.png",
+        "price": 2490,
+        "inCart": 0
+    }
 ]
