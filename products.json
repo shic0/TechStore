@@ -22,9 +22,6 @@
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "assets/LGV30.png",
         "price": 7495
-    } 
-        "price": 7495,
-        "inCart": 0
     },{
         "title": "iPhone 12 Pro Max",
         "description": "A nice leap forward with unbeatable camera in dim light.",
