@@ -3,21 +3,27 @@
         "title": "iPhone X",
         "description": "Last years phone from Apple with a beautiful all display front.",
         "image": "assets/iPhoneX.png",
-        "price": 11495
+        "price": 11495,
+        "inCart": 0
     },{
         "title": "One Plus 5",
         "description": "Sleek and powerful smartphone from One Plus.",
         "image": "assets/OnePlus5.png",
-        "price": 4995
+        "price": 4995,
+        "inCart": 0
     },{
         "title": "Galaxy S8",
         "description": "Really cool edge to edge smartphone from Samsung.",
         "image": "assets/SamsungS8.png",
-        "price": 7990
+        "price": 7990,
+        "inCart": 0
     },{
         "title": "LG V30",
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "assets/LGV30.png",
         "price": 7495
     } 
+        "price": 7495,
+        "inCart": 0
+    }
 ]
