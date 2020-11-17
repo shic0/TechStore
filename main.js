@@ -23,6 +23,8 @@ function initSite() {
 
 /** Uses the loaded products data to create a visible product list on the website */
 function addProductsToWebpage() {
+    
+    
 
     let mainContent = document.getElementById("mainContent")
     // Kallar på parent elementet till mainContainer
@@ -77,6 +79,10 @@ function addProductsToWebpage() {
         buyBtnTxt.innerText = "Lägg till i kundvagnen"
         buyButton.addEventListener("click",function() {
             pushToCart(product)
+            setItems(product)
+            
+           
+            
             
         })
         // skicka till varukorg knappen
@@ -117,16 +123,82 @@ function pushToCart(product) {
 
     productNumbers = parseInt(productNumbers)
     // då värdet är en string gör vi om den till ett nummer
-
+    
+    
+    
+    
+    
     if (productNumbers) {
         localStorage.setItem("cartNumbers",productNumbers + 1)
         document.getElementById("cartSpan").innerHTML = productNumbers + 1
         // om det finns ett värde i cartNumbers så plussar vi med 1
+        
+
     } else{
         localStorage.setItem("cartNumbers", 1)
         document.getElementById("cartSpan").innerHTML = 1
+        
+        
+       
+       
         // om det inte finns lägger vi till 1
+        
     }
+    
+    
    
+    
+    
+    
+
 }
 
+function setItems(product){
+    
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItems = JSON.parse(cartItems)
+    // hämtar och sparar prudukterna från LocalStorage och parsar om till object
+    
+    if(cartItems !=null){
+        
+        if(cartItems[product.title] == undefined){
+            cartItems = {
+                ...cartItems,
+                [product.title]:product
+                // när vi försöker lägga till en annan produkt får vi undifined, därför laddar vi fram det som finns och lägger till nya produkten
+            }
+
+        }
+        cartItems[product.title].inCart += 1
+        // om det redan finns en produkt så plussar vi med en
+    }else{
+        product.inCart = 1
+        cartItems = {
+            [product.title]: product
+        }
+        // om det inte finns någon produkt alls så lägger vi till den första
+    }
+
+    
+    
+    
+
+
+
+
+localStorage.setItem("productsInCart", JSON.stringify(cartItems))
+//sparar en key och gör om från object till string så den kan sparar i localStorage
+
+
+
+   
+}
+    
+   
+       
+    
+    
+        
+    
+    
+ 
