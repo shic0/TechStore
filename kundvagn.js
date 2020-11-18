@@ -1,31 +1,3 @@
-testArray = [
-    {
-        "title": "iPhone X",
-        "description": "Last years phone from Apple with a beautiful all display front.",
-        "image": "assets/iPhoneX.png",
-        "price": 11495,
-        "inCart": 0
-    },{
-        "title": "One Plus 5",
-        "description": "Sleek and powerful smartphone from One Plus.",
-        "image": "assets/OnePlus5.png",
-        "price": 4995,
-        "inCart": 0
-    },{
-        "title": "Galaxy S8",
-        "description": "Really cool edge to edge smartphone from Samsung.",
-        "image": "assets/SamsungS8.png",
-        "price": 7990,
-        "inCart": 0
-    },{
-        "title": "LG V30",
-        "description": "Super nice and beautiful smartphone from LG.",
-        "image": "assets/LGV30.png",
-        "price": 7495,
-        "inCart": 0
-    }
-]
-
 function renderCards() {
     
     let productList = localStorage.getItem('productsInCart')
@@ -39,6 +11,13 @@ function renderCards() {
 //    console.log(localStorage)
 
     let checkOutContainer = document.getElementsByName("checkOutContainer")
+ 
+    document.getElementById("checkOutBtn").addEventListener("click", function(){
+        alert("Tack för ditt köp!");
+        localStorage.clear();
+        location.reload();
+    })
+    
     
     let belopp = document.getElementById("belopp")
     
@@ -50,8 +29,6 @@ function renderCards() {
 
     let product = productList[i]
         
-//        console.log(product)
-        console.log(localStorage)
 
         let imgContainer = document.createElement("div")    
         let textContainer = document.createElement("div")
