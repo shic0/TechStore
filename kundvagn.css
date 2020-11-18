@@ -10,6 +10,10 @@ header {
     width: 100vw;  
     background-color: #212121;
     color: #FFFFFF;
+
+    background-color: black;
+    color: white;
+
 }
 
 .header {
@@ -136,7 +140,7 @@ flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-.checkOutBtn{
+#checkOutBtn{
     background-color: #5596F5;
     color: #FFFFFF;
 
