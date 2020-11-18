@@ -21,6 +21,8 @@
         "title": "LG V30",
         "description": "Super nice and beautiful smartphone from LG.",
         "image": "assets/LGV30.png",
+        "price": 7495
+    } 
         "price": 7495,
         "inCart": 0
     },{
