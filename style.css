@@ -27,6 +27,11 @@ header {
     margin-right: 8px;
 }
 
+.authentificationBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
 .removeLinkStyle {
     text-decoration: none;
     color: #FFFFFF;
