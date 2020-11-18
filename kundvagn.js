@@ -1,57 +1,38 @@
-testArray = [
-    {
-        "title": "iPhone X",
-        "description": "Last years phone from Apple with a beautiful all display front.",
-        "image": "assets/iPhoneX.png",
-        "price": 11495,
-        "inCart": 0
-    },{
-        "title": "One Plus 5",
-        "description": "Sleek and powerful smartphone from One Plus.",
-        "image": "assets/OnePlus5.png",
-        "price": 4995,
-        "inCart": 0
-    },{
-        "title": "Galaxy S8",
-        "description": "Really cool edge to edge smartphone from Samsung.",
-        "image": "assets/SamsungS8.png",
-        "price": 7990,
-        "inCart": 0
-    },{
-        "title": "LG V30",
-        "description": "Super nice and beautiful smartphone from LG.",
-        "image": "assets/LGV30.png",
-        "price": 7495,
-        "inCart": 0
-    }
-]
-
 function renderCards() {
     
     let productList = localStorage.getItem('productsInCart')
    
     if (productList !=null) {
-            productList = JSON.parse(productList)  
-    } else {
-        
-    }
- 
-//    console.log(localStorage)
+            productList = JSON.parse(productList)
 
-    let checkOutContainer = document.getElementsByName("checkOutContainer")
+    } else {
+        let noProductsInCart = document.createElement("h1")
+        noProductsInCart.innerHTML = "Kundvagnen är tom."
+        
+        noProductsInCart.style.marginTop = "150px"
+
+        index = document.getElementById("index")
+        index.appendChild(noProductsInCart)
+
+
+    }
+
+
+
+    //let checkOutContainer = document.getElementsByName("checkOutContainer")
+ 
+    document.getElementById("checkOutBtn").addEventListener("click", function(){
+        alert("Tack för ditt köp!");
+        localStorage.clear();
+        location.reload();
+    })
     
     let belopp = document.getElementById("belopp")
-    
     belopp.innerHTML = "&nbsp;23213 kr"
-    
-
 
     for (let i = 0; i < productList.length; i++) {
 
     let product = productList[i]
-        
-//        console.log(product)
-        console.log(localStorage)
 
         let imgContainer = document.createElement("div")    
         let textContainer = document.createElement("div")
@@ -73,7 +54,8 @@ function renderCards() {
         productPrice.innerHTML = product.price + " kr"
           
         taBortBtn.innerHTML = '<i class="far fa-trash-alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ta bort</i>'
-          
+        taBortBtn.id = productList.length
+        console.log(taBortBtn.id)
           
         imgContainer.className = "imgContainer"
         textContainer.className = "textContainer"
@@ -91,9 +73,12 @@ function renderCards() {
         textContainer.appendChild(productPrice)
 //        productTitle.style.fontWeight = "bold"
      
-        
     
         }
+
+    
+    
+        
     }
     
 renderCards()
