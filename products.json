@@ -24,7 +24,7 @@
         "price": 7495
     },{
         "title": "iPhone 12 Pro Max",
-        "description": "A nice leap forward with unbeatable camera in dim light.",
+        "description": "A huge leap forward with unbeatable camera in dim light.",
         "image": "assets/Phone-12-pro-max.png",
         "price": 15090,
         "inCart": 0
@@ -36,7 +36,7 @@
         "inCart": 0
     },{
         "title": "iPhone 11",
-        "description": "iPhonne has become Pro with a battery that lasts all day.",
+        "description": "iPhone has become Pro with a battery that lasts all day.",
         "image": "assets/iPhone11.png",
         "price": 10890,
         "inCart": 0
