@@ -42,9 +42,9 @@ header {
     justify-content: flex-end;
 }
 
-.hidden {
+/* .hidden {
     display: none;
-}
+} */
 
 
 
@@ -71,5 +71,5 @@ display: flex;
 text-align: center;
 flex-direction: column;   
 margin-left: 65%;
-margin-top: 50px;
+
 }
