@@ -1,39 +1,18 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-#42-Make-a-login-page-login.html-&-login.css
+    
     <link href="https://fonts.googleapis.com/css2?family=Arimo:ital,wght@0,400;0,700;1,400;1,700&display=swap" rel="stylesheet">
     <link href="https://use.fontawesome.com/releases/v5.0.7/css/all.css" rel="stylesheet">
 
- 
-    <link rel="stylesheet" href="kundvagnStyle.css">
-    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.15.1/css/all.css" integrity="sha384-vp86vTRFVJgpjF9jiIGPEEqYqlDwgyBgEF109VFjmqGmIY/Y4HV4d3Gp2irVfcrp" crossorigin="anonymous">
-    <script defer src="kundvagnLogic.js"></script>
-    <script defer src="https://code.jquery.com/jquery-3.5.1.js"   integrity="sha256-QWo7LDvxbWT2tbbQ97B53yJnYU3WhH/C8ycbRAkjPDc="   crossorigin="anonymous"></script>
-    <link rel="stylesheet" href="bootstrap-grid.css">
-    <link rel="stylesheet" href="bootstrap-reboot.css">
-    <link rel="stylesheet" href="bootstrap.css">
-    <script defer src="bootstrap.bundle.js"></script>
-    <script defer src="bootstrap.js"></script>
+    <link rel="stylesheet" href="kundvagn.css">
+    <script defer src="kundvagn.js"></script>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Tech Store</title>
+    <title>TechStore</title>
 </head>
 <body>
-    <header>
-        <div class="header">
-            <div>
-                <a class="removeLinkStyle" id="techStoreLogo" href="index.html"><h1>TechStore</h1></a>
-            </div>
-            <div> 
-                <span id="cartSpan">0</span>
-                <a class="removeLinkStyle" id="aKundvagnColor" href="/kundvagn.html"><i class="fas fa-shopping-cart fa-2x"></i></a>
-            </div>
-        </div>
         
-    </header>
-
-
     <header>
         <div class="header">
             <div>
@@ -59,12 +38,17 @@
         </div>
         <section class="summaContainer">
 
-            <h5 class ="summa">Totalt pris:</h5>
+            <div id="beloppContainer">
+
+                <h5 id ="summa">Totalt pris:</h5>
+                <div id="belopp"></div>
+            </div>
             <button class="checkOutBtn"><i class="fas fa-check"></i>&nbsp;&nbsp;&nbsp;Slutför ditt köp</button>
 
         </section>
         
     </main>
+
 
 </body>
 </html>

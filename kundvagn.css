@@ -1,0 +1,168 @@
+*{
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
+}
+
+header {
+    position: fixed;
+    top: 0px;
+    width: 100vw;  
+    background-color: #212121;
+    color: #FFFFFF;
+
+    background-color: black;
+    color: white;
+
+}
+
+.header {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px;
+}
+
+
+#techStoreLogo{
+
+    font-size: 20px;
+}
+
+#cartSpan {
+    font-size: 40px;
+    margin-right: 8px;
+}
+
+.removeLinkStyle {
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+
+/* h1 och a-hover ska ändras i en class senare */
+.headerText {
+    color: white;
+}
+
+
+header:i {
+    color: white;
+}
+a:hover{
+    text-decoration: none;
+}
+
+/* för att styla a linkarna på kundvagnen, gick inte via class */
+
+.cardContainer{
+    width: 250px;
+    height: 400px;
+    margin-top: 60px;
+    margin-bottom: 30px;
+    margin-left: 15px;
+    margin-right: 15px;
+
+    display: flex;
+    border: 2px solid #5596f5;
+    flex-direction: column;
+    border-radius: 20px;
+    background-color: #F5F5F5;
+    justify-content: center;
+    align-items: center;
+    padding: 15px;
+}
+
+.imgContainer{
+    flex: 3 0 0px;
+    z-index: 1;
+    display: flex;
+    justify-content: center;
+}
+
+.textContainer{
+    flex: 1 0 0px;
+    z-index: 2;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+}
+
+.productImg{
+    max-width: 60%;
+}
+
+.sideTitle{
+    height: 120px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+}
+
+main{
+    margin-top: 100px;
+    display: flex;
+    flex-direction: column;
+}
+
+.mainContainer{
+display: flex;
+justify-content: center;
+width: 100vw;
+flex-wrap: wrap;
+}
+
+.taBortBtn{
+    width: 135px;
+    height: 35px;
+    background-color: #E64E4E;
+    border-radius: 7px;
+    border-style: none;
+    color: #ffffff;
+    font-weight: bold;
+}
+
+.summaContainer{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+
+#beloppContainer{
+    display: flex;
+    flex-direction: row;
+}
+
+#summa{
+    font-weight: bold;
+
+    margin-bottom: 30px;
+}
+
+.checkOutBtn{
+    background-color: #5596F5;
+    color: #FFFFFF;
+
+    padding-left: 15px;
+    padding-right: 15px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+
+    border-style: none;
+    border-radius: 7px;
+    
+}
+
+.indexContainer{
+    display: flex;
+    justify-content: center;
+    width: 100vw;
+    flex-wrap: wrap;
+}
+
+#belopp{
+    margin-bottom: 10px;
+    margin-top: 0px;
+    font-weight: bold;
+}
