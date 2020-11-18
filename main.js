@@ -78,12 +78,8 @@ function addProductsToWebpage() {
         let buyBtnTxt = document.createElement("p")
         buyBtnTxt.innerText = "Lägg till i kundvagnen"
         buyButton.addEventListener("click",function() {
-            pushToCart(product)
-            setItems(product)
-            
-           
-            
-            
+             setItems(product)
+             
         })
         // skicka till varukorg knappen
         
@@ -106,83 +102,43 @@ function addProductsToWebpage() {
 }
 
 function checkLocalStorage(){
-    let productNumbers = localStorage.getItem("cartNumbers")
-    // Hämtar cartnumbers värde från local storage och sparar den i en variabel
+    let cartItems = localStorage.getItem("productsInCart")
+    cartItems = JSON.parse(cartItems)
+    // Hämtar cartitems värde från local storage och sparar den i en variabel
    
-    if (productNumbers) {
-        document.getElementById("cartSpan").innerHTML = productNumbers
-        // om det finns något värde i cartNumbers från localStorage, så blir inner html på cartspan = värdet
+    if (cartItems) {
+        document.getElementById("cartSpan").innerHTML = cartItems.length
+        // om det finns något värde i cartItems från localStorage, så blir inner html på cartspan = värdet
         
     }
 }
 // funktion för, när man refreshar sidan så uppdateras varukorg nummer till det som finns i localstorage
 
-function pushToCart(product) {
-    let productNumbers = localStorage.getItem("cartNumbers")
-    // hämtar o sparar cartNumbers värde från localStorage
 
-    productNumbers = parseInt(productNumbers)
-    // då värdet är en string gör vi om den till ett nummer
-    
-    
-    
-    
-    
-    if (productNumbers) {
-        localStorage.setItem("cartNumbers",productNumbers + 1)
-        document.getElementById("cartSpan").innerHTML = productNumbers + 1
-        // om det finns ett värde i cartNumbers så plussar vi med 1
-        
-
-    } else{
-        localStorage.setItem("cartNumbers", 1)
-        document.getElementById("cartSpan").innerHTML = 1
-        
-        
-       
-       
-        // om det inte finns lägger vi till 1
-        
-    }
-    
-    
-   
-    
-    
-    
-
-}
 
 function setItems(product){
     
     let cartItems = localStorage.getItem("productsInCart")
-//    cartItems = JSON.parse(cartItems)
+    
     // hämtar och sparar prudukterna från LocalStorage och parsar om till object
     
     if(cartItems !=null){
         cartItems = JSON.parse(cartItems)
-       
-        // om det redan finns en produkt så plussar vi med en
+
     }else{
         product.inCart = 1
         cartItems = [] 
-        // om det inte finns någon produkt alls så lägger vi till den första
+        
     }
-
+    cartItems.push("hej")
     cartItems.push(product)
+    // pushar in product i array
     
+    document.getElementById("cartSpan").innerHTML = cartItems.length
+    // cartSpan får får samma värde som lika många produkter i cartItems
     
-    
-
-
-
-
-localStorage.setItem("productsInCart", JSON.stringify(cartItems))
-//sparar en key och gör om från object till string så den kan sparar i localStorage
-
-
-
-   
+    localStorage.setItem("productsInCart", JSON.stringify(cartItems))
+    //sparar en key och gör om från object till string så den kan sparar i localStorage
 }
     
    
