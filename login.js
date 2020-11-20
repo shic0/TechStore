@@ -27,7 +27,6 @@ localStorage.setItem("userList", users)
 function initSite() {
 
 if (localStorage.getItem("userList") === null) {
-  console.log("yes")
   loadPremadeUsers()
 }
 
