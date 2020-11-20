@@ -36,12 +36,12 @@ header {
 
 /* h1 och a-hover ska ändras i en class senare */
 .headerText {
-    color: white;
+    color: #FFFFFF;
 }
 
 
 header:i {
-    color: white;
+    color: #FFFFFF;
 }
 a:hover{
     text-decoration: none;
@@ -69,18 +69,19 @@ a:hover{
 
 .imgContainer{
     flex: 3 0 0px;
-    z-index: 1;
     display: flex;
     justify-content: center;
+    order: 1;
 }
 
 .textContainer{
     flex: 1 0 0px;
-    z-index: 2;
     display: flex;
     align-items: center;
     justify-content: center;
     flex-direction: column;
+    order: 2;
+    font-weight: bold;
 }
 
 .productImg{
@@ -116,6 +117,7 @@ flex-wrap: wrap;
     border-style: none;
     color: #ffffff;
     font-weight: bold;
+    order: 3;
 }
 
 .summaContainer{
@@ -136,7 +138,7 @@ flex-wrap: wrap;
     margin-bottom: 30px;
 }
 
-.checkOutBtn{
+#checkOutBtn{
     background-color: #5596F5;
     color: #FFFFFF;
 
