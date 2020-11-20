@@ -71,12 +71,10 @@ function renderCards() {
             taBortBtn.addEventListener("click", function removeProduct() {
                 
             productList.splice(taBortBtn.id, 1)
-            console.log(productList);
             productList = JSON.stringify(productList)
             localStorage.setItem("productsInCart", productList)
             location.reload();
             
-                    
             })
             
         

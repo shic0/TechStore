@@ -75,7 +75,7 @@ a:hover{
 #titleContainer {
     font-size: 50px;
     font-weight: 700;
-    
+    text-align: center;
 }
 
 #descriptionContainer {
@@ -118,7 +118,7 @@ a:hover{
     .mainContainerGrey {background: #f5f5f5;}
     #imgContainer {height: 300px;}
     #mainContainer {height: 700px;}
-    #imgContainer {width: 200px;}
+
     
   }
   
