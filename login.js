@@ -1,7 +1,15 @@
  window.addEventListener("load", initSite)
  document.getElementById("buttonBtn").addEventListener("click", login) 
+ document.getElementById("createBtn").addEventListener("click", pushToList) 
 
-function initSite() {
+function pushToList(){
+    let userList = localStorage.getItem("userList")
+    userList = JSON.parse(userList)
+    userList.push("test")
+    console.log(userList)
+}
+
+ function initSite() {
 
     let users = [
         {
