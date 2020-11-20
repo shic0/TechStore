@@ -1,5 +1,5 @@
  window.addEventListener("load", initSite)
- document.getElementById("buttonBtn").addEventListener("click", login) 
+ document.getElementById("loginBtn").addEventListener("click", login) 
  document.getElementById("createBtn").addEventListener("click", pushToList) 
 
 function pushToList(){
@@ -9,24 +9,26 @@ function pushToList(){
     console.log(userList)
 }
 
- function initSite() {
 
-    let users = [
-        {
-             username: "Shahin",
-             password: "123"
-        }, {
-             username: "Tim",
-             password: "123"
-         }, {
-             username: "Sherin",
-             password: "123"
-         }
+function initSite() {
     
-     ]
-    
-     localStorage.setItem("userList", JSON.stringify(users))
 } 
+
+let users = [
+    {
+         username: "Shahin",
+         password: "123"
+    }, {
+         username: "Tim",
+         password: "123"
+     }, {
+         username: "Sherin",
+         password: "123"
+     }
+
+ ]
+
+localStorage.setItem("userList", JSON.stringify(users))
 
 function getLoggedInUser() {
     return localStorage.getItem("loggedInUser")
@@ -67,7 +69,7 @@ function login() {
 function logOut() {
     localStorage.removeItem("loggedInUser")
     showLogin()
-}
+} 
 
 function hideLogin() {
     document.getElementById("loginContent").classList.add("hidden")
