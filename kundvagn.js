@@ -3,21 +3,22 @@ function renderCards() {
     let productList = localStorage.getItem('productsInCart')
    
     if (productList !=null) {
-            productList = JSON.parse(productList)
+        productList = JSON.parse(productList)     
 
+        // tar bort element och visar att kundvagnen är tom om localStorage == localstorage.clear
     } else {
         let noProductsInCart = document.createElement("h1")
         noProductsInCart.innerHTML = "Kundvagnen är tom."
         
         noProductsInCart.style.marginTop = "150px"
 
+        document.getElementById("summaContainer").style.display = "none"
+
         index = document.getElementById("index")
         index.appendChild(noProductsInCart)
 
-
     }
-
- 
+    
     document.getElementById("checkOutBtn").addEventListener("click", function(){
         alert("Tack för ditt köp!");
         localStorage.clear();
@@ -102,11 +103,23 @@ function renderCards() {
 
         removeValue ++
 
-
     }
     //visar antalet produkter i kundvagnen, i headern
     document.getElementById("cartSpan").innerHTML = productList.length
 
+// tar bort element och visar att kundvagnen är tom om producList finns på localStorage MEN är tom
+if (productList.length < 1) {
+        document.getElementById("summaContainer").style.display = "none"
 
+        let noProductsInCart = document.createElement("h1")
+        noProductsInCart.innerHTML = "Kundvagnen är tom."
+        
+        noProductsInCart.style.marginTop = "150px"
+
+        index = document.getElementById("index")
+        index.appendChild(noProductsInCart)
+    }
+
+    
 }   
 renderCards()
