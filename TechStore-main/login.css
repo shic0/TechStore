@@ -1,0 +1,75 @@
+* {
+    box-sizing: border-box;
+    margin: 0px;
+    font-family: 'Arimo';
+}
+
+body {
+    margin: 0px;
+}
+
+main {
+    justify-content: center;
+
+}
+
+header {
+    display: flex;
+    position: fixed;
+    align-items: center;
+    top: 0;
+    left: 0; 
+    right: 0;
+    height: 85px;
+    padding-left: 20px;
+    padding-right: 20px;
+    background-color: #212121;
+    color: #FFFFFF;
+}
+
+.header {
+    flex: 1 0 0px;
+}
+
+#techStoreLogo {
+    font-size: 20px;
+    text-decoration: none;
+    color: #FFFFFF;
+} 
+
+.authentificationBox {
+    display: flex;
+    justify-content: flex-end;
+}
+
+/* .hidden {
+    display: none;
+} */
+
+
+
+.mainBox {
+    display: flex;
+    padding-top: 100px;
+    margin-left: 20px;
+    margin-right: 20px;
+    justify-content: right;
+    flex-direction: column;
+    
+    
+}
+.loginBox {
+    display: flex;
+    text-align: center;
+    flex-direction: column;   
+    margin-left: 65%;
+}
+
+
+.createAccount {
+display: flex;
+text-align: center;
+flex-direction: column;   
+margin-left: 65%;
+
+}
