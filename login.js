@@ -1,34 +1,55 @@
- window.addEventListener("load", initSite)
- document.getElementById("loginBtn").addEventListener("click", login) 
- document.getElementById("createBtn").addEventListener("click", pushToList) 
+window.onload = initSite
+document.getElementById("createBtn").addEventListener("click", pushToList)
+document.getElementById("logInBtn").addEventListener("click", login)  
+    
 
-function pushToList(){
-    let userList = localStorage.getItem("userList")
-    userList = JSON.parse(userList)
-    userList.push("test")
-    console.log(userList)
+
+let users = []
+
+function loadPremadeUsers(){
+initUsers = [
+    {
+    username: "Shahin",
+    password: "123"
+   }, {
+    username: "Tim",
+    password: "123"
+    }, {
+    username: "Sherin",
+    password: "123"
+    }
+]
+initUsers = JSON.stringify(initUsers)
+users.push(initUsers)
+localStorage.setItem("userList", users)
 }
 
-
 function initSite() {
-    
+
+if (localStorage.getItem("userList") === null) {
+  loadPremadeUsers()
+}
+
 } 
 
-let users = [
-    {
-         username: "Shahin",
-         password: "123"
-    }, {
-         username: "Tim",
-         password: "123"
-     }, {
-         username: "Sherin",
-         password: "123"
-     }
+function pushToList(){
 
- ]
+    let newUser = {
+        username: document.getElementById("createName").value,
+        password: document.getElementById("createPassword").value
+    }
+    
+    users = localStorage.getItem("userList")
 
-localStorage.setItem("userList", JSON.stringify(users))
+    users = JSON.parse(users)
+    users.push(newUser)
+
+    users = JSON.stringify(users)
+    localStorage.setItem("userList", users)
+
+    alert("account created, you can now log in.")
+
+}
 
 function getLoggedInUser() {
     return localStorage.getItem("loggedInUser")
@@ -69,7 +90,7 @@ function login() {
 function logOut() {
     localStorage.removeItem("loggedInUser")
     showLogin()
-} 
+}
 
 function hideLogin() {
     document.getElementById("loginContent").classList.add("hidden")
@@ -80,5 +101,3 @@ function showLogin() {
     document.getElementById("loginContent").classList.remove("hidden")
     document.getElementById("logoutContent").classList.add("hidden")
 }
-
-
