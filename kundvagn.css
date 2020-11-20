@@ -72,6 +72,8 @@ a:hover{
     display: flex;
     justify-content: center;
     order: 1;
+    object-fit: scale-down;
+
 }
 
 .textContainer{
@@ -79,13 +81,20 @@ a:hover{
     display: flex;
     align-items: center;
     justify-content: center;
+    text-align: center;
     flex-direction: column;
     order: 2;
     font-weight: bold;
+    object-fit: scale-down;
+}
+
+.textContainer.h1{
+    max-height: fit-content;
 }
 
 .productImg{
     max-width: 60%;
+    object-fit: cover;
 }
 
 .sideTitle{
