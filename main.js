@@ -142,10 +142,7 @@ function setItems(product){
 }
     
    
-       
-    
-    
-        
-    
-    
- 
+function logOut() {
+    localStorage.removeItem("loggedInUser")
+    showLogin()
+}
