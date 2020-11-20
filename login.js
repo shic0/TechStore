@@ -1,7 +1,7 @@
  window.addEventListener("load", initSite)
  document.getElementById("buttonBtn").addEventListener("click", login) 
- document.getElementById("logoutBtn").addEventListener("click", logOut) 
-//
+
+
 
 /* document.getElementById("loginBtn").addEventListener("click",logIn)
 //kallar på log in button
@@ -11,21 +11,12 @@ const password = "123" */
 //spara i localStorage 
 
 function initSite() {
-   handleInit() 
+    
+
+/*     handleInit()   */
 } 
 
-function handleInit() {
-    const loggedInUser = getLoggedInUser()
 
-    if(loggedInUser) {
-      hideLogin()
-    }else {
-        let welcomeMessage = document.createElement("h2")
-        welcomeMessage.innerText = "Välkommer till TechStore"
-        mainMessage.appendChild(welcomeElement)
-    }
-
-} 
 
 function getLoggedInUser() {
     return localStorage.getItem("loggedInUser")
@@ -98,16 +89,6 @@ function showLogin() {
         
      } 
 }  */
-
-
-
-
-
-
-
-
-
-
 
 
 
