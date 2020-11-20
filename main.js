@@ -130,7 +130,7 @@ function setItems(product){
         cartItems = [] 
         
     }
-    cartItems.push("hej")
+    
     cartItems.push(product)
     // pushar in product i array
     
