@@ -18,18 +18,28 @@ function renderCards() {
         index.appendChild(noProductsInCart)
 
     }
-    
+    // showTotal kommer visa slutpriset. 
+    let showTotal = 0  
+
+    //slutför köp knapp som tar bort produkter, laddar om sidan och sparar köphistorik
     document.getElementById("checkOutBtn").addEventListener("click", function(){
+        
         alert("Tack för ditt köp!");
+        
+        let purchaseHistory
+        purchaseHistory = localStorage.getItem("productsInCart")
+
         localStorage.clear();
         location.reload();
+
+        localStorage.setItem("purchaseHistory" , purchaseHistory)
+
     })
     
         let removeValue = 0
         let buttonId = removeValue
     
-    // showTotal kommer visa slutpriset. 
-    let showTotal = 0  
+
     let belopp = document.getElementById("belopp")
 
     for (let i = 0; i < productList.length; i++) {
@@ -37,7 +47,6 @@ function renderCards() {
         let product = productList[i]
         //uppdaterar slutpriset varje gång en ny produkt läggs till i kundvagnen.
         showTotal = showTotal + product.price
-      
 
         let imgContainer = document.createElement("div")    
         let textContainer = document.createElement("div")
@@ -68,6 +77,7 @@ function renderCards() {
             taBortBtn.className = "taBortBtn"
             taBortBtn.innerHTML = '<i class="far fa-trash-alt">&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Ta bort</i>'
             cardContainer.appendChild(taBortBtn)
+
             taBortBtn.addEventListener("click", function removeProduct() {
                 
             productList.splice(taBortBtn.id, 1)
@@ -117,7 +127,6 @@ if (productList.length < 1) {
         index = document.getElementById("index")
         index.appendChild(noProductsInCart)
     }
-
     
 }   
 renderCards()
