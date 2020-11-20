@@ -86,8 +86,9 @@ a:hover{
 }
 
 #imgContainer {
-    height: 500px;
-    width: 300px;
+
+    max-height: 60%;
+    object-fit: contain;
 }
 
 #priceContainer {
