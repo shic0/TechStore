@@ -1,6 +1,6 @@
 window.onload = initSite
-document.getElementById("createBtn").addEventListener("click", pushToList)
-document.getElementById("logInBtn").addEventListener("click", login)  
+
+
     
 
 
