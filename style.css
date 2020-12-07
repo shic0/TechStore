@@ -52,9 +52,9 @@ a:hover{
 /* för att styla a linkarna på kundvagnen, gick inte via class */
 
 #mainContent {
-    margin-top: 51px;
+    margin-top: 70px;
     
-    width: 100vw;
+    
     display: flex;
     justify-content: space-around;
     align-items: center;
@@ -62,11 +62,12 @@ a:hover{
 }
 
 #mainContainer {
-    width: 100vw;
-    height: 900px;
+    width: 100%;
+    height: 90vh;
+    
     display: flex;
     flex-direction: column;
-    justify-content: space-evenly;
+    justify-content: space-around;
     align-items: center;
     
 
@@ -81,14 +82,14 @@ a:hover{
 #descriptionContainer {
     font-size: 20px;
     font-weight: 600;
-    padding-left: 30px;
+    
 
 }
 
 #imgContainer {
 
-    max-height: 60%;
-    object-fit: contain;
+    max-height: 300px;
+    object-fit: cover;
 }
 
 #priceContainer {
@@ -117,7 +118,7 @@ a:hover{
 @media only screen and (max-width: 600px) {
     .mainContainerGrey {background: #f5f5f5;}
     #imgContainer {height: 300px;}
-    #mainContainer {height: 700px;}
+    
 
     
   }
@@ -132,14 +133,14 @@ a:hover{
   /* Medium devices (landscape tablets, 768px and up) */
   @media only screen and (min-width: 768px) {
     .mainContainerGrey {background: #F5F5F5;}
-    #mainContainer {height: 1000px}
+    
     
   } 
   
   /* Large devices (laptops/desktops, 992px and up) */
   @media only screen and (min-width: 992px) {
     .mainContainerGrey {background: #f5f5f5;}
-    #mainContainer {height: 950px}
+    
   } 
   
   /* Extra large devices (large laptops and desktops, 1200px and up) */
